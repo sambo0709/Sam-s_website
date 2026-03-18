@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Parts Catalog System | Samuel Boye</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <a href="../index.html" class="logo" id="siteLogo" aria-label="Samuel Boye home">
+        <span class="logo-text">Samuel Boye</span>
+        <img src="../logo.jpeg" alt="Samuel Boye logo" class="logo-img">
+    </a>
+
+    <nav class="floating-nav" aria-label="Primary">
+        <a href="../index.html#projects" class="nav-link">Projects</a>
+        <a href="../index.html#skills" class="nav-link">Skills</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button id="themeToggle" class="dark-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="project-page">
+<section>
+
+    <h1>Car Parts Catalog System</h1>
+
+    <img src="../images/car-parts-catalog.png" alt="Car Parts Catalog System screenshot" class="project-image">
+
+    <p><em>
+        Full-stack internal inventory management system for a mechanic shop, built with PHP,
+        MySQL, session-based authentication, and secure CRUD workflows.
+    </em></p>
+
+    <p>
+        Built a full-stack inventory management system for an internal car parts catalog.
+        The application supports secure authentication, role-based access control, parts
+        management, supplier management, user administration, and dashboard reporting in
+        a multi-page PHP and MySQL application.
+    </p>
+
+    <h2>System Overview</h2>
+    <p>
+        This project was designed as an internal shop management system where authenticated
+        users can browse and manage inventory data. Admin users can manage all users and roles,
+        while non-admin users can view and update only their own account information. The system
+        also supports catalog search, supplier relationships, account updates, and password changes.
+    </p>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>PHP</li>
+        <li>MySQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Session-Based Authentication</li>
+        <li>Prepared Statements</li>
+        <li>CSRF Protection</li>
+    </ul>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>Secure login and logout with password hashing and session handling</li>
+        <li>Role-based access control for Admin and non-admin users</li>
+        <li>Full CRUD functionality for parts and suppliers</li>
+        <li>User management with account update, delete, and password change workflows</li>
+        <li>Search and filtering for catalog items</li>
+        <li>Dashboard view with system counts for parts, suppliers, and users</li>
+    </ul>
+
+    <h2>Security Features</h2>
+    <ul>
+        <li>Passwords verified with secure hashing functions</li>
+        <li>Session-based access protection for authenticated pages</li>
+        <li>CSRF tokens used on modifying form requests</li>
+        <li>Prepared SQL statements used for safer database operations</li>
+    </ul>
+
+    <h2>Technical Architecture</h2>
+    <ul>
+        <li>Frontend: HTML, CSS</li>
+        <li>Backend: PHP</li>
+        <li>Database: MySQL</li>
+        <li>Security: Sessions, CSRF tokens, password hashing</li>
+        <li>Application Style: Multi-page server-rendered full-stack web app</li>
+    </ul>
+
+    <h2>Application Screenshots</h2>
+
+    <h3>Login Page</h3>
+    <img src="../images/car-parts-login.png" alt="Car Parts Catalog login page" class="project-image">
+
+    <h3>Dashboard</h3>
+    <img src="../images/car-parts-dashboard.png" alt="Car Parts Catalog dashboard" class="project-image">
+
+    <h3>Catalog and Inventory</h3>
+    <img src="../images/car-parts-catalog-page.png" alt="Car Parts Catalog inventory page" class="project-image">
+
+    <h3>Supplier Management</h3>
+    <img src="../images/car-parts-suppliers.png" alt="Car Parts Catalog suppliers page" class="project-image">
+
+    <h3>User Management</h3>
+    <img src="../images/car-parts-users.png" alt="Car Parts Catalog users page" class="project-image">
+
+    <h2>What I Learned</h2>
+    <p>
+        This project significantly improved my understanding of full-stack development,
+        backend architecture, and secure web application design. I gained experience
+        implementing authentication systems, protecting forms with CSRF tokens, designing
+        relational data workflows, and managing role-based permissions in a real application.
+        I also strengthened my ability to structure larger multi-page systems with connected
+        CRUD functionality across multiple entities.
+    </p>
+
+    <h2>Future Improvements</h2>
+    <ul>
+        <li>Convert key workflows into a REST API architecture</li>
+        <li>Add JWT-based authentication</li>
+        <li>Build a React frontend for a more dynamic user experience</li>
+        <li>Add pagination, advanced filtering, and reporting dashboards</li>
+    </ul>
+
+    <!-- 🔥 NEW LIVE DEMO SECTION -->
+    <h2>Live Demo</h2>
+
+    <p>
+        You can access the live version of the application below. This deployment includes
+        authentication, inventory management, and full CRUD functionality for parts, suppliers,
+        and users.
+    </p>
+
+    <p>
+        <a href="https://boyeleenaga.csp-server-class.org/dashboard.php
+           target="_blank"
+           rel="noopener noreferrer"
+           class="primary-btn">
+            View Live Application
+        </a>
+    </p>
+
+    <!-- OPTIONAL: TEST LOGIN -->
+    <!--
+    <p><strong>Test Login:</strong> admin@example.com / password123</p>
+    -->
+
+    <nav class="project-page-links" aria-label="Car Parts Catalog System links">
+        <a href="https://github.com/sambo0709/Fullsatck-internal-inventory-system"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="github-btn">
+           GitHub
+        </a>
+
+        <a href="../index.html#featured-project" class="demo-btn">
+            Back to Portfolio
+        </a>
+    </nav>
+
+</section>
+</main>
+
+<footer>
+    <p>© 2026 Samuel Boye. Built with sweat, tears, and love.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

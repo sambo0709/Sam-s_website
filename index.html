@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Boye | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header intro-header">
+    <a href="#" class="logo" id="siteLogo" aria-label="Samuel Boye home">
+        <span class="logo-text">Samuel Boye</span>
+        <img src="logo.jpeg" alt="Samuel Boye logo" class="logo-img">
+    </a>
+
+    <nav class="floating-nav" aria-label="Primary">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button id="themeToggle" class="dark-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1 class="intro-title">
+            <span id="typingText"></span><span class="cursor">|</span>
+        </h1>
+
+        <p class="intro-text">
+            Hi, my name is Samuel Boye, but everyone calls me Sammie. Welcome to my portfolio.
+        </p>
+
+        <nav class="hero-buttons intro-buttons" aria-label="Portfolio quick links">
+            <a href="#projects" class="primary-btn">View Projects</a>
+            <a href="resume.pdf" target="_blank" class="primary-btn">View Resume</a>
+            <a href="resume.pdf" class="primary-btn" download>Download Resume</a>
+        </nav>
+    </section>
+
+    <section id="featured-project">
+        <h2>Featured Project</h2>
+
+        <article class="card featured">
+            <img src="images/car-parts-catalog.png" alt="Car Parts Catalog System screenshot" class="project-image featured-image">
+
+            <h3>Car Parts Catalog System</h3>
+
+            <p>
+                Built a full-stack inventory management system with secure authentication,
+                role-based access control, and CRUD functionality for parts, suppliers,
+                and users using PHP, MySQL, and session-based security.
+            </p>
+
+            <ul>
+                <li>Implemented login, logout, password hashing, and session-based authentication</li>
+                <li>Added CSRF protection and prepared statements for safer form and database operations</li>
+                <li>Built catalog search, supplier management, user administration, and dashboard reporting</li>
+            </ul>
+
+            <p class="project-tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Authentication</span>
+                <span>CRUD</span>
+                <span>Security</span>
+            </p>
+
+            <nav class="project-links" aria-label="Car Parts Catalog System links">
+                <a href="https://github.com/sambo0709/Fullsatck-internal-inventory-system" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+                <a href="projects/car-parts-catalog.html" class="demo-btn">View Project</a>
+            </nav>
+        </article>
+    </section>
+
+    <section id="projects">
+        <h2>Other Projects</h2>
+
+        <section class="project-grid" aria-label="Projects">
+
+            <article class="card">
+                <img src="images/zombie-war.png" alt="Zombie War Simulation screenshot" class="project-image">
+
+                <h3>Zombie War Simulation</h3>
+
+                <p>
+                    Designed and implemented a Java object-oriented combat simulation with
+                    class-based architecture, weapon systems, and battle logic modeled through UML.
+                </p>
+
+                <p class="project-tags">
+                    <span>Java</span>
+                    <span>OOP</span>
+                    <span>UML</span>
+                </p>
+
+                <nav class="project-links" aria-label="Zombie War Simulation links">
+                    <a href="https://github.com/stenceld/CSC422ZombieWarProjectGroupq/tree/SamsBranch" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+                    <a href="projects/zombie-war.html" class="demo-btn">View Project</a>
+                </nav>
+            </article>
+
+            <article class="card">
+                <img src="images/event-registration.png" alt="Event Registration screenshot" class="project-image">
+
+                <h3>Event Registration</h3>
+
+                <p>
+                    Built a full-stack event registration application with structured backend routing,
+                    database-backed event management, and user workflow handling using Node.js, Express, and MongoDB.
+                </p>
+
+                <p class="project-tags">
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                </p>
+
+                <nav class="project-links" aria-label="Event Registration links">
+                    <a href="https://github.com/sambo0709/Web-application-using-mongodb" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+                    <a href="projects/event-registration.html" class="demo-btn">View Project</a>
+                </nav>
+            </article>
+
+            <article class="card">
+                <img src="images/pet-database.png" alt="Pet Database screenshot" class="project-image">
+
+                <h3>Pet Database</h3>
+
+                <p>
+                    Developed a JavaFX desktop application for managing pet records, with a structured
+                    user interface, organized multi-file design, and object-oriented data handling.
+                </p>
+
+                <p class="project-tags">
+                    <span>JavaFX</span>
+                    <span>Java</span>
+                    <span>Database</span>
+                </p>
+
+                <nav class="project-links" aria-label="Pet Database links">
+                    <a href="https://github.com/sambo0709/Software-engineering-CSC422" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+                    <a href="projects/pet-database.html" class="demo-btn">View Project</a>
+                </nav>
+            </article>
+
+            <article class="card">
+                <img src="images/matrix-scalar.png" alt="Matrix Scalar Multiplication screenshot" class="project-image">
+
+                <h3>Matrix Scalar Multiplication</h3>
+
+                <p>
+                    Implemented a C program that reads structured matrix data from a file, validates user input,
+                    performs scalar multiplication on a 5 × 5 matrix, and prints formatted results with error handling.
+                </p>
+
+                <p class="project-tags">
+                    <span>C</span>
+                    <span>File I/O</span>
+                    <span>2D Arrays</span>
+                </p>
+
+                <nav class="project-links" aria-label="Matrix Scalar Multiplication links">
+                    <a href="https://github.com/sambo0709/C-project" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+                    <a href="projects/matrix-scalar.html" class="demo-btn">View Project</a>
+                </nav>
+            </article>
+
+        </section>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <section class="skills-group">
+            <h3>Backend &amp; Web</h3>
+            <section class="skills">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>REST APIs</span>
+                <span>API Design</span>
+                <span>CRUD Operations</span>
+                <span>Routing</span>
+                <span>Middleware</span>
+                <span>JSON</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>PHP</span>
+                <span>Sessions</span>
+                <span>Authentication</span>
+                <span>Authorization</span>
+                <span>CSRF Protection</span>
+                <span>Postman</span>
+                <span>API Testing</span>
+            </section>
+        </section>
+
+        <section class="skills-group">
+            <h3>Languages</h3>
+            <section class="skills">
+                <span>Java</span>
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>C</span>
+                <span>SQL</span>
+                <span>PHP</span>
+            </section>
+        </section>
+
+        <section class="skills-group">
+            <h3>Databases</h3>
+            <section class="skills">
+                <span>MongoDB</span>
+                <span>Mongoose</span>
+                <span>MySQL</span>
+                <span>NoSQL</span>
+                <span>Database Design</span>
+                <span>Schema Design</span>
+                <span>Joins</span>
+                <span>Normalization</span>
+                <span>Prepared Statements</span>
+            </section>
+        </section>
+
+        <section class="skills-group">
+            <h3>Software Engineering / CS</h3>
+            <section class="skills">
+                <span>Data Structures</span>
+                <span>Object-Oriented Programming</span>
+                <span>UML Design</span>
+                <span>Software Testing</span>
+                <span>Debugging</span>
+                <span>Problem Solving</span>
+                <span>Agile Methodologies</span>
+                <span>Team Collaboration</span>
+                <span>Role-Based Access Control</span>
+            </section>
+        </section>
+
+        <section class="skills-group">
+            <h3>Development Tools</h3>
+            <section class="skills">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>VS Code</span>
+                <span>IntelliJ IDEA</span>
+                <span>Docker</span>
+                <span>Linux</span>
+                <span>CLion</span>
+                <span>PyCharm</span>
+                <span>RubyMine</span>
+                <span>Command Line</span>
+            </section>
+        </section>
+
+        <section class="skills-group">
+            <h3>Familiar With</h3>
+            <section class="skills">
+                <span>Ruby</span>
+                <span>C++</span>
+                <span>Fortran</span>
+            </section>
+        </section>
+    </section>
+
+    <section id="coursework">
+        <h2>Relevant Coursework</h2>
+        <section class="skills">
+            <span>Data Structures &amp; Algorithms</span>
+            <span>Software Engineering</span>
+            <span>Systems Programming</span>
+            <span>Object-Oriented Programming</span>
+            <span>Web Development</span>
+            <span>Database Systems</span>
+        </section>
+    </section>
+
+    <section id="learning">
+        <h2>Currently Learning</h2>
+        <section class="skills">
+            <span>React</span>
+            <span>JWT Authentication</span>
+            <span>Advanced SQL</span>
+            <span>Deployment</span>
+            <span>Docker Workflows</span>
+        </section>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Computer Science student at Concordia University St. Paul focused on backend
+            development, object-oriented programming, APIs, authentication, and database-driven
+            applications. My portfolio includes academic and personal projects that demonstrate
+            practical software engineering, secure system design, and problem solving.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+            I am currently seeking software engineering, backend development internship opportunities and entry-level positions.
+        </p>
+
+        <p>Email:
+            <a href="mailto:sboye403@gmail.com">sboye403@gmail.com</a>
+        </p>
+
+        <p>GitHub:
+            <a href="https://github.com/sambo0709" target="_blank" rel="noopener noreferrer">github.com/sambo0709</a>
+        </p>
+
+        <p>LinkedIn:
+            <a href="https://www.linkedin.com/in/samuel-boye-0769192b2/" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/samuel-boye-0769192b2
+            </a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Samuel Boye. Built with sweat, tears, and love.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
