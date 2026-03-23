@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quaver — Mood to Music | Samuel Boye</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<a href="../index.html" class="logo" id="siteLogo">
+<span class="logo-text">Samuel Boye</span>
+<img src="../logo.jpeg" alt="logo" class="logo-img">
+</a>
+
+<nav class="floating-nav">
+<a href="../index.html#projects" class="nav-link">Projects</a>
+<a href="../index.html#skills" class="nav-link">Skills</a>
+<a href="../index.html#about" class="nav-link">About</a>
+<a href="../index.html#contact" class="nav-link">Contact</a>
+</nav>
+
+<button id="themeToggle" class="dark-btn" onclick="toggleDarkMode()">🌙</button>
+</header>
+
+<main class="project-page">
+<section>
+
+<h1>Quaver — Mood to Music</h1>
+
+<img src="../images/mood-to-music.png" alt="Quaver Mood to Music app screenshot" class="project-image">
+
+<p>
+Quaver is a full-stack web application that translates how you're feeling into a curated Spotify playlist.
+Users pick a mood, set how many songs they want, or hit "Random Mood" to let the app decide —
+then Quaver queries the Spotify API and returns matching tracks. You can also search songs,
+artists, or albums directly. The app is deployed live on Render with JWT-authenticated user
+accounts and persistent MongoDB storage.
+</p>
+
+<h2>Technologies Used</h2>
+<ul>
+<li>Node.js + Express.js — server framework and routing</li>
+<li>MongoDB — database for user accounts and session data</li>
+<li>JWT (JSON Web Tokens) — stateless authentication</li>
+<li>bcryptjs — secure password hashing</li>
+<li>Spotify API — music data, search, and playlist generation</li>
+<li>Vanilla HTML, CSS, JavaScript — no framework frontend</li>
+<li>CSS custom properties — dark/light theme support</li>
+<li>Google Fonts (Quicksand, Space Grotesk) — typography</li>
+<li>dotenv — environment variable configuration</li>
+<li>Render — cloud deployment</li>
+</ul>
+
+<h2>Features</h2>
+<ul>
+<li>Mood selection UI that maps emotional states to Spotify search parameters</li>
+<li>Live Spotify API integration returning real track data and playback previews</li>
+<li>JWT-based user authentication with protected routes</li>
+<li>bcrypt password hashing for secure credential storage</li>
+<li>User account creation and login flow</li>
+<li>Dark and light theme toggle with CSS custom properties</li>
+<li>Deployed and accessible live on Render</li>
+</ul>
+
+<h2>Technical Architecture</h2>
+<p>
+The backend is structured as a REST API with Express.js handling routing and middleware.
+Authentication uses JWT tokens issued on login and verified on protected endpoints,
+with passwords hashed using bcrypt before storage. The Spotify API is queried server-side
+using the Client Credentials flow, keeping API secrets out of the browser.
+The frontend communicates with the backend via fetch calls and dynamically renders
+track results without a page reload.
+</p>
+
+<h2>What I Learned</h2>
+<p>
+This project deepened my understanding of secure authentication patterns — specifically
+how JWT and bcrypt work together to keep user data safe without server-side sessions.
+Integrating the Spotify API taught me how to manage OAuth credentials server-side,
+handle rate limits, and shape raw API responses into something meaningful for the UI.
+Deploying on Render also gave me hands-on experience with environment configuration
+and production build considerations.
+</p>
+
+<nav class="project-page-links">
+<a href="https://github.com/sambo0709/Quaver-Sam-s-branch/tree/Main2" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+<a href="https://quaver.onrender.com/" target="_blank" rel="noopener noreferrer" class="demo-btn">View Live Demo</a>
+<a href="../index.html#projects" class="demo-btn">Back to Projects</a>
+</nav>
+
+</section>
+</main>
+
+<footer>
+<p>© 2026 Samuel Boye. Built with sweat, tears, and love.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
