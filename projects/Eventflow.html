@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventFlow — Workout Tracking API | Samuel Boye</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header intro-header">
+  <a href="../index.html" class="logo" aria-label="Samuel Boye home">
+    <span class="logo-text">Samuel Boye</span>
+    <img src="../logo.jpeg" alt="logo" class="logo-img">
+  </a>
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="../index.html#projects" class="nav-link">Projects</a>
+    <a href="../index.html#skills" class="nav-link">Skills</a>
+    <a href="../index.html#about" class="nav-link">About</a>
+    <a href="../index.html#contact" class="nav-link">Contact</a>
+  </nav>
+  <button id="themeToggle" class="dark-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main>
+  <section class="project-detail">
+
+    <h1>EventFlow — Workout Tracking API</h1>
+
+    <img src="../images/eventflow.png" alt="EventFlow Workout Tracking API screenshot" class="project-image featured-image">
+
+    <p>
+      EventFlow is a production-ready backend REST API built with Spring Boot, MongoDB, and Apache Kafka.
+      It manages user workout sessions with full CRUD support, a polymorphic exercise model, and
+      real-time event streaming — firing a Kafka message every time a workout is saved so downstream
+      services can react instantly. The project is fully tested with JUnit 5 and Mockito and
+      containerized with Docker for local development.
+    </p>
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li>Java 17 + Spring Boot 3.2 — REST controllers, service layer, dependency injection</li>
+      <li>MongoDB — document storage via Spring Data repositories</li>
+      <li>Apache Kafka — event streaming with a producer/consumer pipeline</li>
+      <li>JUnit 5 + Mockito — unit and integration testing</li>
+      <li>Docker — containerized MongoDB and Kafka for local development</li>
+      <li>Maven — build and dependency management</li>
+      <li>Jakarta Validation — request body validation with constraint annotations</li>
+    </ul>
+
+    <h2>Features</h2>
+    <ul>
+      <li>Full CRUD REST API for users and workouts (<code>POST</code>, <code>GET</code>, <code>DELETE</code>)</li>
+      <li>Polymorphic exercise model — <code>CardioExercise</code> and <code>StrengthExercise</code> share an abstract base with separate calorie calculation logic</li>
+      <li>Kafka producer fires a <code>WORKOUT_SAVED</code> event after every successful workout write</li>
+      <li>Kafka consumer receives and processes workout events for downstream handling</li>
+      <li>Global exception handling via <code>@RestControllerAdvice</code> with structured error responses</li>
+      <li>Input validation on all request bodies using Jakarta Bean Validation</li>
+      <li>15+ unit and integration tests covering service layer, domain logic, and edge cases</li>
+    </ul>
+
+    <h2>Technical Architecture</h2>
+    <p>
+      The project follows a layered microservices-style architecture. REST controllers handle
+      incoming HTTP requests and delegate to the service layer, which contains all business logic.
+      Repositories abstract MongoDB access using Spring Data. When a workout is successfully
+      persisted, the <code>WorkoutService</code> calls the Kafka producer to publish a
+      <code>WORKOUT_SAVED</code> event to the <code>workout-events</code> topic.
+      The consumer listens on the same topic and processes events independently —
+      decoupling the write path from any downstream logic like notifications or analytics.
+    </p>
+
+    <pre><code>Client
+  └── REST Controllers (UserController, WorkoutController)
+        └── Service Layer (UserService, WorkoutService)
+              ├── MongoDB Repositories
+              └── Kafka Producer → workout-events topic → Kafka Consumer</code></pre>
+
+    <p>
+      The exercise model uses Jackson's <code>@JsonSubTypes</code> for polymorphic
+      deserialization — a single <code>exercises</code> array in the workout payload
+      can contain a mix of <code>cardio</code> and <code>strength</code> objects,
+      each deserializing into the correct subclass automatically.
+    </p>
+
+    <h2>API Endpoints</h2>
+
+    <h3>Users</h3>
+    <ul>
+      <li><code>POST /api/users</code> — create a user profile</li>
+      <li><code>GET /api/users/{id}</code> — get user by ID</li>
+      <li><code>GET /api/users</code> — get all users</li>
+      <li><code>DELETE /api/users/{id}</code> — delete a user</li>
+    </ul>
+
+    <h3>Workouts</h3>
+    <ul>
+      <li><code>POST /api/workouts</code> — create a workout and fire Kafka event</li>
+      <li><code>GET /api/workouts/{id}</code> — get workout by ID</li>
+      <li><code>GET /api/workouts/user/{userId}</code> — get all workouts for a user</li>
+      <li><code>DELETE /api/workouts/{id}</code> — delete a workout</li>
+    </ul>
+
+    <h2>Kafka Event Flow</h2>
+    <p>
+      Every <code>POST /api/workouts</code> request that successfully writes to MongoDB
+      triggers the Kafka producer to publish the following message to the
+      <code>workout-events</code> topic:
+    </p>
+    <pre><code>{
+  "event": "WORKOUT_SAVED",
+  "workoutId": "69e5c0fb1e69a22f74d7299e",
+  "userId": "69e5bf581e69a22f74d7299c"
+}</code></pre>
+    <p>
+      The consumer listens on the same topic and logs the event — in a production system
+      this would trigger push notifications, update analytics dashboards, or sync
+      external fitness platforms.
+    </p>
+
+    <h2>Testing</h2>
+    <p>
+      The test suite uses JUnit 5 with Mockito for mocking dependencies, keeping tests
+      fast and isolated without requiring a running database or Kafka broker.
+      Key test cases include:
+    </p>
+    <ul>
+      <li>Creating a workout verifies the Kafka producer fires exactly once after save</li>
+      <li>Creating a workout for a non-existent user throws <code>ResourceNotFoundException</code> and does not publish a Kafka event</li>
+      <li>Calorie calculations verified for both <code>CardioExercise</code> and <code>StrengthExercise</code> formulas</li>
+      <li><code>StatsService</code> generic average and max operations tested with integer and double lists</li>
+      <li>Edge cases — null lists, empty lists, zero/negative durations — all tested with <code>assertThrows</code></li>
+    </ul>
+
+    <h2>What I Learned</h2>
+    <p>
+      Building EventFlow gave me hands-on experience with the full Spring Boot ecosystem —
+      from wiring up repositories and service beans to configuring Kafka topics and writing
+      idiomatic REST controllers. Integrating Kafka taught me how to decouple writes from
+      downstream processing using event-driven patterns, and how the producer/consumer
+      lifecycle works in a Spring application. Writing the Mockito test suite reinforced
+      the importance of verifying not just return values but side effects — confirming that
+      Kafka fires after a successful save but not after a failed one was one of the more
+      satisfying tests to write.
+    </p>
+
+    <h2>Future Improvements</h2>
+    <ul>
+      <li>Deploy to Render with MongoDB Atlas and Confluent Cloud for Kafka</li>
+      <li>Add JWT-based authentication to protect user and workout endpoints</li>
+      <li>Build a React dashboard to visualize workout history and calorie trends</li>
+      <li>Expand the Kafka consumer to write workout summaries to a separate analytics collection</li>
+    </ul>
+
+    <nav class="project-links" aria-label="EventFlow project links">
+      <a href="https://github.com/sambo0709/eventflow" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+      <a href="../index.html#projects" class="demo-btn">Back to Projects</a>
+    </nav>
+
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Samuel Boye. Built with sweat, tears, and love.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
