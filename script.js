@@ -4,7 +4,7 @@ const toggleButton = document.getElementById("themeToggle");
 const logo = document.getElementById("siteLogo");
 const cards = document.querySelectorAll(".card");
 const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("main section[id]");
+const sections = document.querySelectorAll("main section[id], main div[id]");
 const typingText = document.getElementById("typingText");
 
 const modal = document.getElementById("projectModal");
@@ -95,6 +95,18 @@ function revealCards() {
 
         if (cardTop < window.innerHeight - 100) {
             card.classList.add("show");
+        }
+    });
+}
+
+function revealSkillTags() {
+    const groups = document.querySelectorAll(".skills");
+    groups.forEach(group => {
+        const groupTop = group.getBoundingClientRect().top;
+        if (groupTop < window.innerHeight - 60) {
+            group.querySelectorAll("span").forEach((span, i) => {
+                setTimeout(() => span.classList.add("show"), i * 40);
+            });
         }
     });
 }
@@ -190,6 +202,7 @@ window.addEventListener("load", () => {
     }
 
     revealCards();
+    revealSkillTags();
     updateLogo();
     updateActiveNav();
     typeHeroTitle();
@@ -197,6 +210,7 @@ window.addEventListener("load", () => {
 
 window.addEventListener("scroll", () => {
     revealCards();
+    revealSkillTags();
     updateLogo();
     updateActiveNav();
 });

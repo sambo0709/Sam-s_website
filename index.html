@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samuel Boye | Portfolio</title>
+<meta name="description" content="Samuel Boye — Computer Science student and backend developer building secure, production-ready APIs with Java, Spring Boot, Node.js, and MongoDB.">
+<meta property="og:title" content="Samuel Boye | Portfolio">
+<meta property="og:description" content="Backend developer building secure, production-ready APIs. Projects in Spring Boot, Node.js, PHP, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sambo0709.github.io">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +21,8 @@
     <a href="#projects" class="nav-link">Projects</a>
     <a href="#skills" class="nav-link">Skills</a>
     <a href="#about" class="nav-link">About</a>
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#education" class="nav-link">Education</a>
     <a href="#contact" class="nav-link">Contact</a>
   </nav>
   <button id="themeToggle" class="dark-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
@@ -27,43 +34,48 @@
       <span id="typingText"></span><span class="cursor">|</span>
     </h1>
     <p class="intro-text">
-      Hi, my name is Samuel Boye, but everyone calls me Sammie. Welcome to my portfolio.
+      Building backends, breaking things, fixing them, and calling it a feature.
     </p>
     <nav class="hero-buttons intro-buttons" aria-label="Portfolio quick links">
       <a href="#projects" class="primary-btn">View Projects</a>
       <a href="resume.pdf" target="_blank" class="primary-btn">View Resume</a>
-      <a href="resume.pdf" class="primary-btn" download>Download Resume</a>
     </nav>
   </section>
 
   <section id="featured-project">
     <h2>Featured Project</h2>
     <article class="card featured">
-      <img src="images/car-parts-catalog.png" alt="Car Parts Catalog System screenshot" class="project-image featured-image">
-      <h3>Car Parts Catalog System</h3>
-      <p>
-        Built a full-stack inventory management system with secure authentication,
-        role-based access control, and CRUD operations for parts, suppliers,
-        and users using PHP, MySQL, and session-based security.
-      </p>
-      <p><strong>Key Contributions:</strong></p>
-      <ul>
-        <li>Implemented login, logout, password hashing, and session-based authentication</li>
-        <li>Added CSRF protection and prepared statements for safer form and database operations</li>
-        <li>Built catalog search, supplier management, user administration, and dashboard reporting</li>
-      </ul>
-      <p class="project-tags">
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>Authentication</span>
-        <span>CRUD</span>
-        <span>Security</span>
-      </p>
-      <nav class="project-links" aria-label="Car Parts Catalog System links">
-        <a href="https://github.com/sambo0709/Fullsatck-internal-inventory-system" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
-        <a href="projects/car-parts-catalog.html" class="demo-btn">View Project</a>
-        <a href="https://boyeleenaga.csp-server-class.org/dashboard.php" target="_blank" rel="noopener noreferrer" class="demo-btn">Live Demo</a>
-      </nav>
+      <div class="featured-layout">
+        <div class="featured-image-col">
+          <div class="project-image-wrap"><img src="images/car-parts-catalog.png" alt="Car Parts Catalog System screenshot" class="project-image featured-image"></div>
+        </div>
+        <div class="featured-content-col">
+          <h3>Car Parts Catalog System</h3>
+          <p>
+            Built a full-stack inventory management system with secure authentication,
+            role-based access control, and CRUD operations for parts, suppliers,
+            and users using PHP, MySQL, and session-based security.
+          </p>
+          <p><strong>Key Contributions:</strong></p>
+          <ul>
+            <li>Implemented login, logout, password hashing, and session-based authentication</li>
+            <li>Added CSRF protection and prepared statements for safer form and database operations</li>
+            <li>Built catalog search, supplier management, user administration, and dashboard reporting</li>
+          </ul>
+          <p class="project-tags">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>Authentication</span>
+            <span>CRUD</span>
+            <span>Security</span>
+          </p>
+          <nav class="project-links" aria-label="Car Parts Catalog System links">
+            <a href="https://github.com/sambo0709/Fullsatck-internal-inventory-system" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+            <a href="projects/car-parts-catalog.html" class="demo-btn">View Project</a>
+            <a href="https://boyeleenaga.csp-server-class.org/dashboard.php" target="_blank" rel="noopener noreferrer" class="demo-btn">Live Demo</a>
+          </nav>
+        </div>
+      </div>
     </article>
   </section>
 
@@ -73,7 +85,7 @@
 
       <!-- EventFlow — NEW -->
       <article class="card">
-        <img src="images/eventflow.png" alt="EventFlow Workout Tracking API screenshot" class="project-image">
+        <div class="project-image-wrap"><img src="images/eventflow.png" alt="EventFlow Workout Tracking API screenshot" class="project-image"></div>
         <h3>EventFlow — Workout Tracking API</h3>
         <p>
           Built a production-ready REST API with Spring Boot microservices and MongoDB for
@@ -82,9 +94,9 @@
         </p>
         <p><strong>Key Contributions:</strong></p>
         <ul>
-          <li>Architected a polymorphic exercise model (CardioExercise, StrengthExercise) as Spring Boot REST resources with MongoDB repositories</li>
-          <li>Integrated Apache Kafka producer/consumer pipeline — fires a <code>WORKOUT_SAVED</code> event on every workout creation for real-time downstream processing</li>
-          <li>Wrote 15+ unit and integration tests using JUnit 5 and Mockito covering service layer, calorie calculations, and edge cases</li>
+          <li>Designed a polymorphic exercise model (CardioExercise, StrengthExercise) backed by MongoDB repositories</li>
+          <li>Integrated Apache Kafka to fire a <code>WORKOUT_SAVED</code> event on every workout creation</li>
+          <li>Wrote 15+ unit and integration tests with JUnit 5 and Mockito covering edge cases and calorie logic</li>
         </ul>
         <p class="project-tags">
           <span>Java</span>
@@ -102,12 +114,18 @@
       </article>
 
       <article class="card">
-        <img src="images/zombie-war.png" alt="Zombie War Simulation screenshot" class="project-image">
+        <div class="project-image-wrap"><img src="images/zombie-war.png" alt="Zombie War Simulation screenshot" class="project-image"></div>
         <h3>Zombie War Simulation</h3>
         <p>
           Designed and implemented a Java object-oriented combat simulation with
           class-based architecture, weapon systems, and battle logic modeled through UML.
         </p>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+          <li>Modeled survivors, zombies, and weapons as a class hierarchy using OOP principles</li>
+          <li>Implemented turn-based battle logic with weapon accuracy and damage calculations</li>
+          <li>Designed the system architecture using UML class diagrams before coding</li>
+        </ul>
         <p class="project-tags">
           <span>Java</span>
           <span>OOP</span>
@@ -120,12 +138,18 @@
       </article>
 
       <article class="card">
-        <img src="images/event-registration.png" alt="Event Registration screenshot" class="project-image">
+        <div class="project-image-wrap"><img src="images/event-registration.png" alt="Event Registration screenshot" class="project-image"></div>
         <h3>Event Registration</h3>
         <p>
           Built a full-stack event registration application with structured backend routing,
           database-backed event management, and user workflow handling using Node.js, Express, and MongoDB.
         </p>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+          <li>Built RESTful routes for creating, viewing, and managing events with Express</li>
+          <li>Integrated MongoDB for persistent event and user data storage via Mongoose</li>
+          <li>Handled user registration workflows with form validation and error feedback</li>
+        </ul>
         <p class="project-tags">
           <span>Node.js</span>
           <span>Express</span>
@@ -138,12 +162,18 @@
       </article>
 
       <article class="card">
-        <img src="images/pet-database.png" alt="Pet Database screenshot" class="project-image">
+        <div class="project-image-wrap"><img src="images/pet-database.png" alt="Pet Database screenshot" class="project-image"></div>
         <h3>Pet Database</h3>
         <p>
           Developed a JavaFX desktop application for managing pet records, with a structured
           user interface, organized multi-file design, and object-oriented data handling.
         </p>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+          <li>Built a JavaFX GUI for adding, editing, and deleting pet records</li>
+          <li>Structured the project across multiple classes using OOP and separation of concerns</li>
+          <li>Managed in-memory data with structured object models and list-based storage</li>
+        </ul>
         <p class="project-tags">
           <span>JavaFX</span>
           <span>Java</span>
@@ -156,12 +186,18 @@
       </article>
 
       <article class="card">
-        <img src="images/matrix-scalar.png" alt="Matrix Scalar Multiplication screenshot" class="project-image">
+        <div class="project-image-wrap"><img src="images/matrix-scalar.png" alt="Matrix Scalar Multiplication screenshot" class="project-image"></div>
         <h3>Matrix Scalar Multiplication</h3>
         <p>
           Implemented a C program that reads structured matrix data from a file, validates user input,
           performs scalar multiplication on a 5 × 5 matrix, and prints formatted results with error handling.
         </p>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+          <li>Parsed structured matrix data from a file using C file I/O</li>
+          <li>Validated scalar input and handled edge cases with clear error messages</li>
+          <li>Performed and formatted scalar multiplication on a 5×5 2D array</li>
+        </ul>
         <p class="project-tags">
           <span>C</span>
           <span>File I/O</span>
@@ -174,12 +210,18 @@
       </article>
 
       <article class="card">
-        <img src="images/mood-to-music.png" alt="Quaver Mood to Music app screenshot" class="project-image">
+        <div class="project-image-wrap"><img src="images/mood-to-music.png" alt="Quaver Mood to Music app screenshot" class="project-image"></div>
         <h3>Quaver — Mood to Music</h3>
         <p>
           Built a full-stack web app that translates user moods into personalized Spotify playlists,
           featuring JWT authentication, bcrypt password hashing, and live Spotify API integration.
         </p>
+        <p><strong>Key Contributions:</strong></p>
+        <ul>
+          <li>Integrated Spotify OAuth API to fetch and return mood-matched playlists in real time</li>
+          <li>Secured user accounts with JWT-based authentication and bcrypt password hashing</li>
+          <li>Deployed the full stack to Render with environment-based config for production</li>
+        </ul>
         <p class="project-tags">
           <span>Node.js</span>
           <span>Express</span>
@@ -192,6 +234,7 @@
         <nav class="project-links" aria-label="Quaver Mood to Music links">
           <a href="https://github.com/sambo0709/Quaver-Sam-s-branch/tree/Main2" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
           <a href="projects/mood-to-music.html" class="demo-btn">View Project</a>
+          <a href="https://quaver.onrender.com/" target="_blank" rel="noopener noreferrer" class="demo-btn">Live Demo</a>
         </nav>
       </article>
 
@@ -236,6 +279,7 @@
         <span>C</span>
         <span>SQL</span>
         <span>PHP</span>
+        <span>Ruby</span>
       </section>
     </section>
 
@@ -297,48 +341,104 @@
       </section>
     </section>
 
-    <section class="skills-group">
-      <h3>Familiar With</h3>
-      <section class="skills">
-        <span>Ruby</span>
-        <span>C++</span>
-        <span>Fortran</span>
-      </section>
-    </section>
 
-  </section>
-
-  <section id="coursework">
-    <h2>Relevant Coursework</h2>
-    <section class="skills">
-      <span>Data Structures &amp; Algorithms</span>
-      <span>Software Engineering</span>
-      <span>Systems Programming</span>
-      <span>Object-Oriented Programming</span>
-      <span>Web Development</span>
-      <span>Database Systems</span>
-    </section>
-  </section>
-
-  <section id="learning">
-    <h2>Currently Learning</h2>
-    <section class="skills">
-      <span>React</span>
-      <span>TypeScript</span>
-      <span>AWS</span>
-      <span>Advanced SQL</span>
-      <span>Deployment</span>
-    </section>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a Computer Science student at Concordia University St. Paul focused on backend
-      development, object-oriented programming, APIs, authentication, and database-driven
-      applications. My portfolio includes academic and personal projects that demonstrate
-      practical software engineering, secure system design, and problem solving.
+      I'm a Computer Science student at Concordia University St. Paul with a focus on
+      backend development, API design, and secure, database-driven applications.
     </p>
+    <p>
+      I enjoy building systems that are clean under the hood — from designing RESTful APIs
+      with Spring Boot to implementing authentication, Kafka event pipelines, and full-stack
+      web apps. My projects span Java, Node.js, PHP, and C, and I bring the same attention
+      to security and structure across all of them.
+    </p>
+    <p>
+      Outside of code, I'm driven by solving real problems and continuously picking up new
+      tools. I'm currently exploring React, TypeScript, and AWS as I work toward a career
+      in backend or full-stack engineering.
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-list">
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>IT System Analyst – Supply Chain</h3>
+            <p class="experience-company">Sam's Club Distribution Center · Shakopee, MN</p>
+          </div>
+          <span class="experience-date">Jul 2024–Present</span>
+        </div>
+        <ul>
+          <li>Engineered Python and VBA automation scripts for high-volume supply chain workflows, reducing processing time by <strong>20%</strong> and eliminating manual data entry errors</li>
+          <li>Designed SQL queries, stored procedures, and ETL pipelines processing 1,000+ records daily, loading supply chain metrics into cross-functional dashboards</li>
+          <li>Performed regression testing and rollout validation for production system updates across multiple release cycles, maintaining zero production incidents</li>
+          <li>Diagnosed and documented 20+ recurring system failures in a structured knowledge base, reducing repeat incident resolution time</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>Website Developer Intern</h3>
+            <p class="experience-company">Minnesota Historical Society · St. Paul, MN</p>
+          </div>
+          <span class="experience-date">Jun 2025–Sep 2025</span>
+        </div>
+        <ul>
+          <li>Identified and resolved 15+ front-end performance bottlenecks using Chrome DevTools and Lighthouse on mnhs.org (500K+ annual visitors)</li>
+          <li>Resolved WCAG 2.1 accessibility violations with semantic HTML improvements, contributing to measurable Core Web Vitals gains</li>
+          <li>Used Google Analytics data to drive layout changes that reduced bounce rates on key landing pages</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3>Emergency Medical Technician (EMT)</h3>
+            <p class="experience-company">Mankato Fire Department / Mayo Clinic · Mankato, MN</p>
+          </div>
+          <span class="experience-date">2021–2023</span>
+        </div>
+        <ul>
+          <li>Provided emergency medical care and patient assessment in high-pressure, time-critical situations</li>
+          <li>Demonstrated strong communication, teamwork, and rapid decision-making under stress</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-card">
+      <div class="education-header">
+        <div>
+          <h3>Concordia University St. Paul</h3>
+          <p class="education-degree">Bachelor of Science in Computer Science</p>
+        </div>
+        <span class="education-date">Expected May 2026</span>
+      </div>
+      <p class="education-desc">Studying core CS concepts with a focus on software engineering, systems design, and backend development.</p>
+      <h4 class="education-courses-label">Relevant Coursework</h4>
+      <section class="skills education-courses">
+        <span>Data Structures &amp; Algorithms</span>
+        <span>Software Engineering</span>
+        <span>Software Architecture &amp; AI-Driven Design</span>
+        <span>Object-Oriented Programming</span>
+        <span>Programming Language Paradigms</span>
+        <span>Web Development</span>
+        <span>Discrete Mathematics</span>
+        <span>Agile Management</span>
+        <span>Computational Thinking &amp; Problem Solving</span>
+      </section>
+    </div>
   </section>
 
   <section id="contact">
@@ -358,10 +458,37 @@
         linkedin.com/in/samuel-boye-0769192b2
       </a>
     </p>
+
+    <form class="contact-form" action="mailto:sboye403@gmail.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="5" placeholder="What would you like to say?" required></textarea>
+      </div>
+      <button type="submit" class="primary-btn">Send Message</button>
+    </form>
   </section>
 </main>
 
 <footer>
+  <div class="footer-icons">
+    <a href="https://github.com/sambo0709" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/samuel-boye-0769192b2/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="mailto:sboye403@gmail.com" aria-label="Email">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.87l9.615-7.049h.749c.904 0 1.636.732 1.636 1.636z"/></svg>
+    </a>
+  </div>
   <p>© 2026 Samuel Boye. Built with sweat, tears, and love.</p>
 </footer>
 
