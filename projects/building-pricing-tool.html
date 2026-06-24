@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Pricing Tool | Samuel Boye</title>
+<meta name="description" content="An ASP.NET Core Razor Pages estimator connected to a Python and Fusion 360 model-generation pipeline.">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo" id="siteLogo" aria-label="Samuel Boye home">
+    <span class="logo-text">Samuel Boye</span>
+    <img src="../logo.jpeg" alt="Samuel Boye logo" class="logo-img">
+  </a>
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="../index.html#projects" class="nav-link">Projects</a>
+    <a href="../index.html#skills" class="nav-link">Skills</a>
+    <a href="../index.html#about" class="nav-link">About</a>
+    <a href="../index.html#contact" class="nav-link">Contact</a>
+  </nav>
+  <button id="themeToggle" class="dark-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="project-page">
+<section>
+
+<h1>Building Pricing Tool — ASP.NET Core Web App</h1>
+
+<img src="../images/building-pricing-tool.png" alt="Building Pricing Tool estimator beside its generated Fusion 360 building model" class="project-image">
+
+<p>
+The Building Pricing Tool turns building dimensions and features into a detailed cost estimate.
+The ASP.NET Core Razor Pages interface calculates floor, wall, roof, material, labor, and total
+costs, then exports project data for an automated 3D-modeling workflow.
+</p>
+
+<h2>Technologies Used</h2>
+<ul>
+  <li>C# and ASP.NET Core</li>
+  <li>Razor Pages and .NET</li>
+  <li>Python</li>
+  <li>Autodesk Fusion 360</li>
+  <li>HTML and CSS</li>
+  <li>CSV data exchange</li>
+</ul>
+
+<h2>Features</h2>
+<ul>
+  <li>Accepts building dimensions, roof pitch, door count, and window count</li>
+  <li>Calculates floor, wall, and roof areas along with material and labor costs</li>
+  <li>Exports project inputs and estimates to CSV</li>
+  <li>Feeds a C# → CSV → Python → Fusion 360 pipeline</li>
+  <li>Generates a corresponding 3D building model from web-form inputs</li>
+</ul>
+
+<h2>Technical Architecture</h2>
+<p>
+C# object models hold the building specifications and pricing data while Razor Pages handles
+the form workflow and results display. The application writes the project data to CSV, which a
+Python script transforms into parameters for Fusion 360. This connects the browser-based estimate
+to a generated 3D representation of the same building.
+</p>
+
+<h2>What I Learned</h2>
+<p>
+This project strengthened my experience with ASP.NET Core, object-oriented C#, form design, and
+data exchange between different systems. It also taught me how to extend a web application beyond
+the browser by connecting its output to Python automation and CAD modeling software.
+</p>
+
+<nav class="project-page-links" aria-label="Building Pricing Tool project links">
+  <a href="https://github.com/sambo0709/BuildingPricingToolWeb" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+  <a href="../index.html#projects" class="demo-btn">Back to Projects</a>
+</nav>
+
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Samuel Boye. Built with sweat, tears, and love.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

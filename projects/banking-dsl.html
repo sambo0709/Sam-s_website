@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking DSL | Samuel Boye</title>
+<meta name="description" content="A Python domain-specific language that processes banking commands through a lexer, parser, abstract syntax tree, and interpreter.">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo" id="siteLogo" aria-label="Samuel Boye home">
+    <span class="logo-text">Samuel Boye</span>
+    <img src="../logo.jpeg" alt="Samuel Boye logo" class="logo-img">
+  </a>
+  <nav class="floating-nav" aria-label="Primary">
+    <a href="../index.html#projects" class="nav-link">Projects</a>
+    <a href="../index.html#skills" class="nav-link">Skills</a>
+    <a href="../index.html#about" class="nav-link">About</a>
+    <a href="../index.html#contact" class="nav-link">Contact</a>
+  </nav>
+  <button id="themeToggle" class="dark-btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="project-page">
+<section>
+
+<h1>Banking DSL — Domain-Specific Language Interpreter</h1>
+
+<img src="../images/banking-dsl.png" alt="Ledger Banking DSL simulator showing accounts, balances, and transaction controls" class="project-image">
+
+<p>
+Banking DSL is a custom language built in Python for expressing and executing common banking
+operations. Simple commands travel through a complete compiler-style pipeline—lexer, parser,
+abstract syntax tree, and interpreter—before changing account state.
+</p>
+
+<h2>Technologies Used</h2>
+<ul>
+  <li>Python 3.9+</li>
+  <li>Lexer and tokenization</li>
+  <li>Recursive-descent parsing</li>
+  <li>Abstract syntax trees</li>
+  <li>EBNF grammar</li>
+  <li>Python unittest</li>
+</ul>
+
+<h2>Features</h2>
+<ul>
+  <li>Deposit funds into an account</li>
+  <li>Withdraw funds with account and balance validation</li>
+  <li>Check balances and create new accounts</li>
+  <li>Load nine demonstration accounts at startup</li>
+  <li>Display lexer, parser, and AST output for each DSL command</li>
+  <li>Manage the account data through the Ledger simulator interface</li>
+</ul>
+
+<h2>Language Pipeline</h2>
+<pre><code>User command
+  → Lexer and token list
+  → Parser
+  → Abstract syntax tree
+  → Interpreter
+  → Bank account operation
+  → Result</code></pre>
+
+<p>
+The language supports commands such as <code>deposit</code>, <code>withdraw</code>,
+<code>balance</code>, and <code>create</code>. Its EBNF specification defines valid statements,
+account identifiers, names, and numeric amounts before the interpreter executes them.
+</p>
+
+<h2>Testing</h2>
+<p>
+A seven-test Python unittest suite verifies deposits, withdrawals, balance lookups, account
+creation, and account-number formatting. The project uses only the Python standard library,
+so it can run without external dependencies.
+</p>
+
+<h2>What I Learned</h2>
+<p>
+This project made programming-language concepts concrete by connecting grammar rules to executable
+business operations. It strengthened my understanding of tokenization, parsing, tree-based program
+representation, interpretation, and specification-driven testing.
+</p>
+
+<nav class="project-page-links" aria-label="Banking DSL project links">
+  <a href="https://github.com/sambo0709/BankingDSL_PYTHON" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+  <a href="../index.html#projects" class="demo-btn">Back to Projects</a>
+</nav>
+
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Samuel Boye. Built with sweat, tears, and love.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

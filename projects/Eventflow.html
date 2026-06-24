@@ -61,7 +61,7 @@
 
     <h2>Technical Architecture</h2>
     <p>
-      The project follows a layered microservices-style architecture. REST controllers handle
+      The project follows a layered MVC architecture. REST controllers handle
       incoming HTTP requests and delegate to the service layer, which contains all business logic.
       Repositories abstract MongoDB access using Spring Data. When a workout is successfully
       persisted, the <code>WorkoutService</code> calls the Kafka producer to publish a

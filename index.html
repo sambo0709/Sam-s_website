@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samuel Boye | Portfolio</title>
-<meta name="description" content="Samuel Boye — Computer Science student and backend developer building secure, production-ready APIs with Java, Spring Boot, Node.js, and MongoDB.">
+<meta name="description" content="Samuel Boye — Computer Science graduate and software engineer experienced in Python automation, full-stack development, and test engineering.">
 <meta property="og:title" content="Samuel Boye | Portfolio">
-<meta property="og:description" content="Backend developer building secure, production-ready APIs. Projects in Spring Boot, Node.js, PHP, and more.">
+<meta property="og:description" content="Software engineer building automated workflows, full-stack applications, APIs, and reliable test suites.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sambo0709.github.io">
 <link rel="stylesheet" href="style.css">
@@ -34,7 +34,7 @@
       <span id="typingText"></span><span class="cursor">|</span>
     </h1>
     <p class="intro-text">
-      Building backends, breaking things, fixing them, and calling it a feature.
+      Computer Science graduate building useful software, reliable automation, and well-tested systems.
     </p>
     <nav class="hero-buttons intro-buttons" aria-label="Portfolio quick links">
       <a href="#projects" class="primary-btn">View Projects</a>
@@ -47,32 +47,32 @@
     <article class="card featured">
       <div class="featured-layout">
         <div class="featured-image-col">
-          <div class="project-image-wrap"><img src="images/car-parts-catalog.png" alt="Car Parts Catalog System screenshot" class="project-image featured-image"></div>
+          <div class="project-image-wrap"><img src="images/mood-to-music.png" alt="Quaver music recommendation app screenshot" class="project-image featured-image"></div>
         </div>
         <div class="featured-content-col">
-          <h3>Car Parts Catalog System</h3>
+          <h3>Quaver — Music Recommendation App &amp; Playwright Test Suite</h3>
           <p>
-            Built a full-stack inventory management system with secure authentication,
-            role-based access control, and CRUD operations for parts, suppliers,
-            and users using PHP, MySQL, and session-based security.
+            Built a full-stack music recommendation app with JWT authentication, Spotify OAuth 2.0,
+            a scheduled data pipeline, cloud deployment, and automated CI/CD.
           </p>
           <p><strong>Key Contributions:</strong></p>
           <ul>
-            <li>Implemented login, logout, password hashing, and session-based authentication</li>
-            <li>Added CSRF protection and prepared statements for safer form and database operations</li>
-            <li>Built catalog search, supplier management, user administration, and dashboard reporting</li>
+            <li>Created a cross-browser Playwright end-to-end test suite in TypeScript using the Page Object Model</li>
+            <li>Covered Chromium, Firefox, and WebKit with structured reporting through JUnit XML and Xray</li>
+            <li>Deployed a scheduled data pipeline to the cloud with GitHub Actions CI/CD</li>
           </ul>
           <p class="project-tags">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>Authentication</span>
-            <span>CRUD</span>
-            <span>Security</span>
+            <span>Node.js</span>
+            <span>TypeScript</span>
+            <span>MongoDB</span>
+            <span>Playwright</span>
+            <span>OAuth 2.0</span>
+            <span>CI/CD</span>
           </p>
-          <nav class="project-links" aria-label="Car Parts Catalog System links">
-            <a href="https://github.com/sambo0709/Fullsatck-internal-inventory-system" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
-            <a href="projects/car-parts-catalog.html" class="demo-btn">View Project</a>
-            <a href="https://boyeleenaga.csp-server-class.org/dashboard.php" target="_blank" rel="noopener noreferrer" class="demo-btn">Live Demo</a>
+          <nav class="project-links" aria-label="Quaver links">
+            <a href="https://github.com/sambo0709/Quaver-Sam-s-branch/tree/Main2" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+            <a href="projects/mood-to-music.html" class="demo-btn">View Project</a>
+            <a href="https://quaver.onrender.com/" target="_blank" rel="noopener noreferrer" class="demo-btn">Live Demo</a>
           </nav>
         </div>
       </div>
@@ -83,20 +83,18 @@
     <h2>Other Projects</h2>
     <section class="project-grid" aria-label="Projects">
 
-      <!-- EventFlow — NEW -->
       <article class="card">
         <div class="project-image-wrap"><img src="images/eventflow.png" alt="EventFlow Workout Tracking API screenshot" class="project-image"></div>
         <h3>EventFlow — Workout Tracking API</h3>
         <p>
-          Built a production-ready REST API with Spring Boot microservices and MongoDB for
-          managing workout sessions, featuring real-time Kafka event streaming and a full
-          JUnit/Mockito test suite.
+          Built a REST API with asynchronous Kafka event streaming, MVC architecture,
+          MongoDB persistence, and a comprehensive JUnit 5 and Mockito test suite.
         </p>
         <p><strong>Key Contributions:</strong></p>
         <ul>
-          <li>Designed a polymorphic exercise model (CardioExercise, StrengthExercise) backed by MongoDB repositories</li>
-          <li>Integrated Apache Kafka to fire a <code>WORKOUT_SAVED</code> event on every workout creation</li>
-          <li>Wrote 15+ unit and integration tests with JUnit 5 and Mockito covering edge cases and calorie logic</li>
+          <li>Decoupled event producers and consumers to support independent scaling</li>
+          <li>Managed a Docker-orchestrated local infrastructure for repeatable development</li>
+          <li>Tested API behavior and business logic with JUnit 5 and Mockito</li>
         </ul>
         <p class="project-tags">
           <span>Java</span>
@@ -114,127 +112,54 @@
       </article>
 
       <article class="card">
-        <div class="project-image-wrap"><img src="images/zombie-war.png" alt="Zombie War Simulation screenshot" class="project-image"></div>
-        <h3>Zombie War Simulation</h3>
+        <div class="project-image-wrap"><img src="images/building-pricing-tool.png" alt="Building Pricing Tool web estimator and generated Fusion 360 model" class="project-image"></div>
+        <h3>Building Pricing Tool — ASP.NET Core Web App</h3>
         <p>
-          Designed and implemented a Java object-oriented combat simulation with
-          class-based architecture, weapon systems, and battle logic modeled through UML.
+          Built a Razor Pages application that calculates building estimates from C# object models
+          and exports project data to CSV.
         </p>
         <p><strong>Key Contributions:</strong></p>
         <ul>
-          <li>Modeled survivors, zombies, and weapons as a class hierarchy using OOP principles</li>
-          <li>Implemented turn-based battle logic with weapon accuracy and damage calculations</li>
-          <li>Designed the system architecture using UML class diagrams before coding</li>
+          <li>Extended a C# → CSV → Python → Fusion 360 pipeline to generate 3D building models from web form inputs</li>
+          <li>Designed semantic HTML forms and custom CSS for a polished estimator workflow</li>
+          <li>Applied object-oriented design across the pricing and export pipeline</li>
         </ul>
         <p class="project-tags">
-          <span>Java</span>
-          <span>OOP</span>
-          <span>UML</span>
+          <span>C#</span>
+          <span>ASP.NET Core</span>
+          <span>Razor Pages</span>
+          <span>.NET</span>
+          <span>Python</span>
         </p>
-        <nav class="project-links" aria-label="Zombie War Simulation links">
-          <a href="https://github.com/stenceld/CSC422ZombieWarProjectGroupq/tree/SamsBranch" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
-          <a href="projects/zombie-war.html" class="demo-btn">View Project</a>
+        <nav class="project-links" aria-label="Building Pricing Tool links">
+          <a href="https://github.com/sambo0709/BuildingPricingToolWeb" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+          <a href="projects/building-pricing-tool.html" class="demo-btn">View Project</a>
         </nav>
       </article>
 
       <article class="card">
-        <div class="project-image-wrap"><img src="images/event-registration.png" alt="Event Registration screenshot" class="project-image"></div>
-        <h3>Event Registration</h3>
+        <div class="project-image-wrap"><img src="images/banking-dsl.png" alt="Ledger Banking DSL simulator account dashboard" class="project-image"></div>
+        <h3>Banking DSL — Domain-Specific Language Interpreter</h3>
         <p>
-          Built a full-stack event registration application with structured backend routing,
-          database-backed event management, and user workflow handling using Node.js, Express, and MongoDB.
+          Built a compiler-style pipeline in Python with a lexer, parser, abstract syntax tree,
+          interpreter, EBNF grammar, and automated tests.
         </p>
         <p><strong>Key Contributions:</strong></p>
         <ul>
-          <li>Built RESTful routes for creating, viewing, and managing events with Express</li>
-          <li>Integrated MongoDB for persistent event and user data storage via Mongoose</li>
-          <li>Handled user registration workflows with form validation and error feedback</li>
+          <li>Modeled deposits, withdrawals, balances, and account creation as financial operations</li>
+          <li>Translated banking business rules into executable code through a custom language</li>
+          <li>Validated the interpreter with a seven-test unittest suite</li>
         </ul>
         <p class="project-tags">
-          <span>Node.js</span>
-          <span>Express</span>
-          <span>MongoDB</span>
+          <span>Python</span>
+          <span>Lexer</span>
+          <span>Parser</span>
+          <span>AST</span>
+          <span>unittest</span>
         </p>
-        <nav class="project-links" aria-label="Event Registration links">
-          <a href="https://github.com/sambo0709/Web-application-using-mongodb" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
-          <a href="projects/event-registration.html" class="demo-btn">View Project</a>
-        </nav>
-      </article>
-
-      <article class="card">
-        <div class="project-image-wrap"><img src="images/pet-database.png" alt="Pet Database screenshot" class="project-image"></div>
-        <h3>Pet Database</h3>
-        <p>
-          Developed a JavaFX desktop application for managing pet records, with a structured
-          user interface, organized multi-file design, and object-oriented data handling.
-        </p>
-        <p><strong>Key Contributions:</strong></p>
-        <ul>
-          <li>Built a JavaFX GUI for adding, editing, and deleting pet records</li>
-          <li>Structured the project across multiple classes using OOP and separation of concerns</li>
-          <li>Managed in-memory data with structured object models and list-based storage</li>
-        </ul>
-        <p class="project-tags">
-          <span>JavaFX</span>
-          <span>Java</span>
-          <span>Database</span>
-        </p>
-        <nav class="project-links" aria-label="Pet Database links">
-          <a href="https://github.com/sambo0709/Software-engineering-CSC422" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
-          <a href="projects/pet-database.html" class="demo-btn">View Project</a>
-        </nav>
-      </article>
-
-      <article class="card">
-        <div class="project-image-wrap"><img src="images/matrix-scalar.png" alt="Matrix Scalar Multiplication screenshot" class="project-image"></div>
-        <h3>Matrix Scalar Multiplication</h3>
-        <p>
-          Implemented a C program that reads structured matrix data from a file, validates user input,
-          performs scalar multiplication on a 5 × 5 matrix, and prints formatted results with error handling.
-        </p>
-        <p><strong>Key Contributions:</strong></p>
-        <ul>
-          <li>Parsed structured matrix data from a file using C file I/O</li>
-          <li>Validated scalar input and handled edge cases with clear error messages</li>
-          <li>Performed and formatted scalar multiplication on a 5×5 2D array</li>
-        </ul>
-        <p class="project-tags">
-          <span>C</span>
-          <span>File I/O</span>
-          <span>2D Arrays</span>
-        </p>
-        <nav class="project-links" aria-label="Matrix Scalar Multiplication links">
-          <a href="https://github.com/sambo0709/C-project" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
-          <a href="projects/matrix-scalar.html" class="demo-btn">View Project</a>
-        </nav>
-      </article>
-
-      <article class="card">
-        <div class="project-image-wrap"><img src="images/mood-to-music.png" alt="Quaver Mood to Music app screenshot" class="project-image"></div>
-        <h3>Quaver — Mood to Music</h3>
-        <p>
-          Built a full-stack web app that translates user moods into personalized Spotify playlists,
-          featuring JWT authentication, bcrypt password hashing, and live Spotify API integration.
-        </p>
-        <p><strong>Key Contributions:</strong></p>
-        <ul>
-          <li>Integrated Spotify OAuth API to fetch and return mood-matched playlists in real time</li>
-          <li>Secured user accounts with JWT-based authentication and bcrypt password hashing</li>
-          <li>Deployed the full stack to Render with environment-based config for production</li>
-        </ul>
-        <p class="project-tags">
-          <span>Node.js</span>
-          <span>Express</span>
-          <span>MongoDB</span>
-          <span>Spotify API</span>
-          <span>JWT</span>
-          <span>bcrypt</span>
-          <span>Render</span>
-        </p>
-        <nav class="project-links" aria-label="Quaver Mood to Music links">
-          <a href="https://github.com/sambo0709/Quaver-Sam-s-branch/tree/Main2" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
-          <a href="projects/mood-to-music.html" class="demo-btn">View Project</a>
-          <a href="https://quaver.onrender.com/" target="_blank" rel="noopener noreferrer" class="demo-btn">Live Demo</a>
+        <nav class="project-links" aria-label="Banking DSL links">
+          <a href="https://github.com/sambo0709/BankingDSL_PYTHON" target="_blank" rel="noopener noreferrer" class="github-btn">GitHub</a>
+          <a href="projects/banking-dsl.html" class="demo-btn">View Project</a>
         </nav>
       </article>
 
@@ -245,121 +170,63 @@
     <h2>Skills</h2>
 
     <section class="skills-group">
-      <h3>Backend &amp; Web</h3>
+      <h3>Languages</h3>
       <section class="skills">
-        <span>Spring Boot</span>
-        <span>Node.js</span>
-        <span>Express</span>
-        <span>REST APIs</span>
-        <span>Microservices</span>
-        <span>Apache Kafka</span>
-        <span>API Design</span>
-        <span>CRUD Operations</span>
-        <span>Routing</span>
-        <span>Middleware</span>
-        <span>JSON</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>PHP</span>
-        <span>Sessions</span>
-        <span>Authentication</span>
-        <span>Authorization</span>
-        <span>CSRF Protection</span>
-        <span>Postman</span>
-        <span>API Testing</span>
+        <span>Python</span><span>Java</span><span>C#</span><span>TypeScript</span>
+        <span>JavaScript</span><span>SQL</span><span>PHP</span><span>HTML</span><span>CSS</span>
       </section>
     </section>
 
     <section class="skills-group">
-      <h3>Languages</h3>
+      <h3>Frameworks</h3>
       <section class="skills">
-        <span>Java</span>
-        <span>Python</span>
-        <span>JavaScript</span>
-        <span>C</span>
-        <span>SQL</span>
-        <span>PHP</span>
-        <span>Ruby</span>
+        <span>ASP.NET Core</span><span>Spring Boot</span><span>Express.js</span>
+        <span>React</span><span>Node.js</span><span>Playwright</span><span>.NET</span>
+      </section>
+    </section>
+
+    <section class="skills-group">
+      <h3>Tools &amp; Platforms</h3>
+      <section class="skills">
+        <span>Git</span><span>GitHub Actions</span><span>Docker</span><span>Power BI</span>
+        <span>VS Code</span><span>Linux</span><span>Figma</span><span>HubSpot</span>
+        <span>Drupal</span><span>WordPress</span>
       </section>
     </section>
 
     <section class="skills-group">
       <h3>Databases</h3>
       <section class="skills">
-        <span>MongoDB</span>
-        <span>Mongoose</span>
-        <span>MySQL</span>
-        <span>NoSQL</span>
-        <span>Database Design</span>
-        <span>Schema Design</span>
-        <span>Joins</span>
-        <span>Normalization</span>
-        <span>Prepared Statements</span>
+        <span>MySQL</span><span>MongoDB Atlas</span>
       </section>
     </section>
 
     <section class="skills-group">
-      <h3>Testing</h3>
+      <h3>Concepts</h3>
       <section class="skills">
-        <span>JUnit 5</span>
-        <span>Mockito</span>
-        <span>Unit Testing</span>
-        <span>Integration Testing</span>
-        <span>Regression Testing</span>
-        <span>Software Testing</span>
+        <span>Object-Oriented Programming</span><span>REST APIs</span>
+        <span>CI/CD</span><span>OAuth 2.0</span><span>JWT</span>
+        <span>Test-Driven Development</span><span>Page Object Model</span>
+        <span>Agile/Scrum</span>
       </section>
     </section>
-
-    <section class="skills-group">
-      <h3>Software Engineering / CS</h3>
-      <section class="skills">
-        <span>Data Structures</span>
-        <span>Object-Oriented Programming</span>
-        <span>Distributed Systems</span>
-        <span>UML Design</span>
-        <span>Debugging</span>
-        <span>Problem Solving</span>
-        <span>Agile Methodologies</span>
-        <span>Team Collaboration</span>
-        <span>Role-Based Access Control</span>
-      </section>
-    </section>
-
-    <section class="skills-group">
-      <h3>Development Tools</h3>
-      <section class="skills">
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Docker</span>
-        <span>VS Code</span>
-        <span>IntelliJ IDEA</span>
-        <span>Linux</span>
-        <span>CLion</span>
-        <span>PyCharm</span>
-        <span>RubyMine</span>
-        <span>Command Line</span>
-      </section>
-    </section>
-
-
   </section>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I'm a Computer Science student at Concordia University St. Paul with a focus on
-      backend development, API design, and secure, database-driven applications.
+      I'm a recent Computer Science graduate from Concordia University St. Paul with
+      hands-on experience in Python automation, full-stack development, and test engineering.
     </p>
     <p>
-      I enjoy building systems that are clean under the hood — from designing RESTful APIs
-      with Spring Boot to implementing authentication, Kafka event pipelines, and full-stack
-      web apps. My projects span Java, Node.js, PHP, and C, and I bring the same attention
-      to security and structure across all of them.
+      I build and ship real applications across C#, Java, TypeScript, JavaScript, and Node.js.
+      My recent work includes automated production data workflows, cross-browser Playwright
+      test suites, event-driven Spring Boot APIs, and an ASP.NET Core pricing tool.
     </p>
     <p>
-      Outside of code, I'm driven by solving real problems and continuously picking up new
-      tools. I'm currently exploring React, TypeScript, and AWS as I work toward a career
-      in backend or full-stack engineering.
+      I care about practical systems that make work clearer and faster—whether that means
+      reducing manual processing, surfacing operational metrics, or turning business rules
+      into reliable software.
     </p>
   </section>
 
@@ -370,45 +237,30 @@
       <div class="experience-item">
         <div class="experience-header">
           <div>
-            <h3>IT System Analyst – Supply Chain</h3>
+            <h3>Systems Analyst — IT</h3>
             <p class="experience-company">Sam's Club Distribution Center · Shakopee, MN</p>
           </div>
           <span class="experience-date">Jul 2024–Present</span>
         </div>
         <ul>
-          <li>Engineered Python and VBA automation scripts for high-volume supply chain workflows, reducing processing time by <strong>20%</strong> and eliminating manual data entry errors</li>
-          <li>Designed SQL queries, stored procedures, and ETL pipelines processing 1,000+ records daily, loading supply chain metrics into cross-functional dashboards</li>
-          <li>Performed regression testing and rollout validation for production system updates across multiple release cycles, maintaining zero production incidents</li>
-          <li>Diagnosed and documented 20+ recurring system failures in a structured knowledge base, reducing repeat incident resolution time</li>
+          <li>Write and maintain Python automation scripts for production data workflows, reducing manual processing overhead</li>
+          <li>Investigate system issues, document root causes, and deliver findings to technical and non-technical stakeholders</li>
+          <li>Build Power BI dashboards that surface operational metrics for cross-functional teams</li>
         </ul>
       </div>
 
       <div class="experience-item">
         <div class="experience-header">
           <div>
-            <h3>Website Developer Intern</h3>
+            <h3>Web Developer Intern</h3>
             <p class="experience-company">Minnesota Historical Society · St. Paul, MN</p>
           </div>
           <span class="experience-date">Jun 2025–Sep 2025</span>
         </div>
         <ul>
-          <li>Identified and resolved 15+ front-end performance bottlenecks using Chrome DevTools and Lighthouse on mnhs.org (500K+ annual visitors)</li>
-          <li>Resolved WCAG 2.1 accessibility violations with semantic HTML improvements, contributing to measurable Core Web Vitals gains</li>
-          <li>Used Google Analytics data to drive layout changes that reduced bounce rates on key landing pages</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-header">
-          <div>
-            <h3>Emergency Medical Technician (EMT)</h3>
-            <p class="experience-company">Mankato Fire Department / Mayo Clinic · Mankato, MN</p>
-          </div>
-          <span class="experience-date">2021–2023</span>
-        </div>
-        <ul>
-          <li>Provided emergency medical care and patient assessment in high-pressure, time-critical situations</li>
-          <li>Demonstrated strong communication, teamwork, and rapid decision-making under stress</li>
+          <li>Designed and shipped multiple public-facing pages using HubSpot, Drupal, and WordPress from scratch</li>
+          <li>Wrote custom JavaScript, integrated third-party APIs and web forms, and performed QA on all delivered pages</li>
+          <li>Managed content updates and page publishing workflows while coordinating feedback across design and technical requirements</li>
         </ul>
       </div>
 
@@ -423,9 +275,9 @@
           <h3>Concordia University St. Paul</h3>
           <p class="education-degree">Bachelor of Science in Computer Science</p>
         </div>
-        <span class="education-date">Expected May 2026</span>
+        <span class="education-date">May 2026</span>
       </div>
-      <p class="education-desc">Studying core CS concepts with a focus on software engineering, systems design, and backend development.</p>
+      <p class="education-desc"><strong>GPA: 3.85 · Dean's List</strong></p>
       <h4 class="education-courses-label">Relevant Coursework</h4>
       <section class="skills education-courses">
         <span>Data Structures &amp; Algorithms</span>
@@ -444,8 +296,8 @@
   <section id="contact">
     <h2>Contact</h2>
     <p>
-      I am currently seeking software engineering internships, backend development internships,
-      and entry-level software engineering opportunities.
+      I am currently seeking entry-level software engineering, full-stack development,
+      test engineering, and systems automation opportunities.
     </p>
     <p>Email:
       <a href="mailto:sboye403@gmail.com">sboye403@gmail.com</a>

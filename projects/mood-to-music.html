@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quaver — Mood to Music | Samuel Boye</title>
+<title>Quaver — Music Recommendation App &amp; Playwright Test Suite | Samuel Boye</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -28,7 +28,7 @@
 <main class="project-page">
 <section>
 
-<h1>Quaver — Mood to Music</h1>
+<h1>Quaver — Music Recommendation App &amp; Playwright Test Suite</h1>
 
 <img src="../images/mood-to-music.png" alt="Quaver Mood to Music app screenshot" class="project-image">
 
@@ -37,16 +37,20 @@ Quaver is a full-stack web application that translates how you're feeling into a
 Users pick a mood, set how many songs they want, or hit "Random Mood" to let the app decide —
 then Quaver queries the Spotify API and returns matching tracks. You can also search songs,
 artists, or albums directly. The app is deployed live on Render with JWT-authenticated user
-accounts and persistent MongoDB storage.
+accounts and persistent MongoDB storage. A TypeScript Playwright suite tests the complete
+experience across Chromium, Firefox, and WebKit.
 </p>
 
 <h2>Technologies Used</h2>
 <ul>
 <li>Node.js + Express.js — server framework and routing</li>
+<li>TypeScript + Playwright — cross-browser end-to-end testing</li>
 <li>MongoDB — database for user accounts and session data</li>
 <li>JWT (JSON Web Tokens) — stateless authentication</li>
 <li>bcryptjs — secure password hashing</li>
 <li>Spotify API — music data, search, and playlist generation</li>
+<li>Spotify OAuth 2.0 — secure API authorization</li>
+<li>GitHub Actions — automated CI/CD and scheduled data pipeline</li>
 <li>Vanilla HTML, CSS, JavaScript — no framework frontend</li>
 <li>CSS custom properties — dark/light theme support</li>
 <li>Google Fonts (Quicksand, Space Grotesk) — typography</li>
@@ -63,7 +67,16 @@ accounts and persistent MongoDB storage.
 <li>User account creation and login flow</li>
 <li>Dark and light theme toggle with CSS custom properties</li>
 <li>Deployed and accessible live on Render</li>
+<li>Cross-browser test coverage using the Page Object Model</li>
+<li>JUnit XML output integrated with Xray for test execution tracking and reporting</li>
 </ul>
+
+<h2>Test Engineering</h2>
+<p>
+The Playwright suite is written in TypeScript and organizes reusable page behavior with the
+Page Object Model. It runs the same end-to-end user flows in Chromium, Firefox, and WebKit,
+then exports JUnit XML results to Xray for structured tracking and reporting.
+</p>
 
 <h2>Technical Architecture</h2>
 <p>
@@ -81,8 +94,8 @@ This project deepened my understanding of secure authentication patterns — spe
 how JWT and bcrypt work together to keep user data safe without server-side sessions.
 Integrating the Spotify API taught me how to manage OAuth credentials server-side,
 handle rate limits, and shape raw API responses into something meaningful for the UI.
-Deploying on Render also gave me hands-on experience with environment configuration
-and production build considerations.
+Building the cross-browser test suite strengthened my understanding of maintainable test
+architecture, CI/CD automation, and reporting reliable results across multiple browser engines.
 </p>
 
 <nav class="project-page-links">
