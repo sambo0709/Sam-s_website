@@ -15,7 +15,7 @@ const modalTech = document.getElementById("modalTech");
 const modalFeatures = document.getElementById("modalFeatures");
 const modalGithub = document.getElementById("modalGithub");
 
-const heroTitle = "Sammie's Portfolio";
+const heroTitle = "Sam's Portfolio";
 let typingIndex = 0;
 
 const projectData = {
